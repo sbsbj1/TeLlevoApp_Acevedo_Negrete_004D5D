@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="grind">    
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="class">
+  <ion-card>
+    <ion-card-header>
+       <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="floating">Usuario: </ion-label>
+          <ion-input formControlName="user" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Password: </ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="Ingresar()" id="boton1"expand="block" fill="outline" shape="round">
+        Ingresar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/register']">Registrarse como conductor</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro-pasajero']">Registrarse como Pasajero</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-footer>

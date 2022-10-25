@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="grind">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+       <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="floating">Correo: </ion-label>
+          <ion-input formControlName="correo" type="email"></ion-input>
+          <ion-text color="danger">
+            <div *ngIf="formularioLogin.get('correo').hasError('required') && 
+            formularioLogin.get('correo').touched">
+              Correo no deberia estar vacio
+            </div>
+            <div *ngIf="formularioLogin.get('correo').hasError('email') && 
+            formularioLogin.get('correo').touched">
+              Correo no deberia estar vacio
+            </div>
+          </ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Password: </ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+          <ion-text color="danger">
+            <div *ngIf="formularioLogin.get('password').hasError('required') && 
+            formularioLogin.get('password').touched">
+              Contrasena no deberia estar vacia.
+            </div>
+            <div *ngIf="formularioLogin.get('password').hasError('pattern') && 
+            formularioLogin.get('password').touched">
+              Contrasena debe ser entre 8-18 caracteres, caracteres especiales, numeros y mayuscula.
+            </div>
+          </ion-text>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="Ingresar()" expand="block" fill="outline" shape="round">
+        Ingresar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/register']">Registrarse como conductor</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro-pasajero']">Registrarse como Pasajero</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-footer>

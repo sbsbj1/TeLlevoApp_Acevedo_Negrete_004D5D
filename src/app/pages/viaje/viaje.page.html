@@ -1,0 +1,63 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title > Menú </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="dark" >
+
+    <ion-button id="i" routerLink="/viaje"expand="block" fill="clear" shape="round">
+      <ion-icon name="car-outline"></ion-icon>
+      Viaje
+    </ion-button>
+    <ion-button id="i" routerLink="/home"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Informacion
+    </ion-button>
+    <ion-button (click)="exit()" id="i" expand="block" fill="clear" shape="round">
+      <ion-icon slot="start" name="exit-outline"> </ion-icon>
+
+      Salir
+    </ion-button>
+
+
+
+
+  </ion-content>
+</ion-menu>
+
+
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title id="xx">Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<br>
+<div class="container">
+ <h1>Ingresa tu Destino porfavor
+ </h1>
+ <br><br>
+</div>
+<ion-content>
+  <ion-card>
+    <img src="assets/img/mapt.png"/>
+    <ion-card-header>
+      <ion-card-title>Ingrese Destino</ion-card-title>
+      
+    </ion-card-header>
+  
+  </ion-card>
+
+  <ion-list>
+  <ion-item>
+    <ion-label>Destino</ion-label>
+    <ion-input placeholder="Ingrese destino"></ion-input>
+  </ion-item>
+  </ion-list>
+</ion-content>

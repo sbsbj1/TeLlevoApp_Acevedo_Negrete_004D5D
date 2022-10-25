@@ -1,0 +1,60 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title > Menú </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="dark" >
+
+    <ion-button id="i" routerLink="/viaje"expand="block" fill="clear" shape="round">
+      <ion-icon name="car-outline"></ion-icon>
+      Viaje
+    </ion-button>
+    <ion-button id="i" routerLink="/home"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Informacion
+    </ion-button>
+    <ion-button (click)="exit()" id="i" expand="block" fill="clear" shape="round">
+      <ion-icon slot="start" name="exit-outline"> </ion-icon>
+
+      Salir
+    </ion-button>
+
+
+
+
+  </ion-content>
+</ion-menu>
+
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title id="xx">Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <br><br>
+  <div class=ion-padding-start> 
+  <h2 class="ion-text-center">Iniciativa de te llevo</h2>
+  
+   <br>
+   <br>
+   <br>
+   <img src="assets/img/Stre.jpg">
+  <h5>Te llevo surge como una iniciativa en ayuda de los estudiantes de duoc que debido a retorno a la presencialidad sufrieron dificultades 
+      TALES Como Falta de transporte público en ese horario.
+    - Alto costo de servicios de transporte particular (Uber, taxi, etc.).
+    - No contar con movilización propia.
+    - Falta de transporte facilitado por la institución de educación
+      Te llevo app busca solucionar la movilizacion mediantes un sistema de calculo de rutas cruzadas y con una tarifa mas baja para los estudiantes de duoc  </h5>
+  
+  
+</div>
+
+</ion-content>

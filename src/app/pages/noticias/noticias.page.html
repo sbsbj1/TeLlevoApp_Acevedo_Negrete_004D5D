@@ -1,0 +1,73 @@
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title > Menú </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="dark" >
+
+    <ion-button id="i" routerLink="/noticias"expand="block" fill="clear" shape="round">
+      <ion-icon name="bug-outline"></ion-icon>
+      Generar QR
+    </ion-button>
+    <ion-button id="i" routerLink="/found-p"expand="block" fill="clear" shape="round">
+      <ion-icon name="car-outline"></ion-icon>
+      Generar QR
+    </ion-button>
+    <ion-button id="i" routerLink="/data-user"expand="block" fill="clear" shape="round">
+      <ion-icon name="earth-outline"></ion-icon>
+      Generar QR
+    </ion-button>
+    <ion-button (click)="exit()" id="i" expand="block" fill="clear" shape="round">
+      <ion-icon slot="start" name="exit-outline"> </ion-icon>
+
+      Salir
+    </ion-button>
+
+
+
+
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title id="xx">Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+<h3>Seccion de noticias mientras esperas tu viaje </h3>
+<ion-content color="tertiary">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+          *ngFor="let noticia of noticias; let i=index">
+
+          <ion-card>
+            <ion-card-header>
+                <ion-card-subtitle>
+                  <span class="text-primary">{{i + 1}}. </span>
+                  <span class="noticia-source-name">{{noticia.source.name}} </span> </ion-card-subtitle>
+                <ion-card-title>{{noticia.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-img *ngIf="noticia.urlToImage"
+                      [src] ="noticia.urlToImage"></ion-img>
+            <ion-card-content>
+              <p>
+                {{noticia.descripcion}}
+              </p>
+            </ion-card-content>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

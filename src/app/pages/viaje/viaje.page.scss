@@ -1,0 +1,54 @@
+ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  #container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  .ion-padding-start{
+    size: 26px;
+  }
+  
+  h5{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+  }
+  
+  ion-title{
+    position: absolute;
+    text-align: center;
+  }
+
+  h1{
+    
+    text-align: center;
+
+  }
